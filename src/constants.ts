@@ -97,5 +97,5 @@ export const DATA: PortfolioData = {
       skills: ["Digital Electronics", "Microprocessors", "Circuit Analysis"]
     }
   ],
-  profileImage: "https://live.staticflickr.com/65535/54397390620_4917616149_h.jpg"
+  profileImage: "VEDANT.jpeg"
 };

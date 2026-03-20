@@ -150,7 +150,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-square lg:aspect-auto lg:h-[500px] glass-panel rounded-3xl overflow-hidden group"
+              className="relative aspect-[3/4] lg:h-[600px] glass-panel rounded-3xl overflow-hidden group mx-auto lg:mx-0 w-full max-w-[450px] lg:max-w-none"
             >
               <div className="absolute inset-0 opacity-20 technical-grid" />
               
@@ -160,7 +160,8 @@ export default function App() {
                   <img 
                     src={DATA.profileImage} 
                     alt={DATA.name}
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100 z-0"
+                    crossOrigin="anonymous"
+                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-700 z-0"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -307,24 +308,6 @@ export default function App() {
             )}
           </AnimatePresence>
         </section>
-
-        {/* Footer */}
-        <footer className="pt-20 border-t border-border flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="font-mono text-xs text-text-dim">
-            © {new Date().getFullYear()} VEDANT PATOLE. BUILT_WITH_REACT_AND_MOTION.
-          </div>
-          <div className="flex gap-6">
-            <a href={DATA.github} target="_blank" rel="noopener noreferrer" className="text-text-dim hover:text-accent transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
-            <a href={DATA.linkedin} target="_blank" rel="noopener noreferrer" className="text-text-dim hover:text-accent transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href={`mailto:${DATA.email}`} className="text-text-dim hover:text-accent transition-colors">
-              <Mail className="w-5 h-5" />
-            </a>
-          </div>
-        </footer>
       </main>
     </div>
   );
