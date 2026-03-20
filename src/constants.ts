@@ -97,5 +97,5 @@ export const DATA: PortfolioData = {
       skills: ["Digital Electronics", "Microprocessors", "Circuit Analysis"]
     }
   ],
-  profileImage: "VEDANT.jpeg"
+  profileImage: "https://res.cloudinary.com/dbaqekx6k/image/upload/f_auto,q_auto/VEDANT_yen3vj"
 };
